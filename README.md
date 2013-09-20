@@ -1,6 +1,7 @@
 CSCI E-15 Dynamic Web Apps - Project 2
 ==============================================
 p2.edhebert.com
+ehebert@fas.harvard.edu
 
 Users to your microblog can...
 
