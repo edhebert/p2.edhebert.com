@@ -3,7 +3,6 @@ class users_controller extends base_controller {
 
     public function __construct() {
         parent::__construct();
-        echo "users_controller construct called<br><br>";
     } 
 
     public function index() {
@@ -24,12 +23,17 @@ class users_controller extends base_controller {
 
     public function profile($user_name = NULL) {
 
-        if($user_name == NULL) {
-            echo "No user specified";
-        }
-        else {
-            echo "This is the profile for ".$user_name;
-        }
+        // pass the profile view to the 'content' area of the master template
+        $this->template->content = View::instance('v_users_profile');
+    
+        // title for this page 
+        $this->template->title = "Profile";
+
+        // pass the user name to the profile view
+        $this->template->content->user_name = $user_name;
+
+        //render the view 
+        echo $this->template;
     }
 
-} # end of the class
+} // eoc
