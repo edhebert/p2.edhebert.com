@@ -25,7 +25,17 @@ class users_controller extends base_controller {
         // Dump out the results of POST to see what the form submitted
         echo '<pre>';
         print_r($_POST);
-        echo '</pre>';  
+        echo '</pre>'; 
+
+        // More data we want stored with the user
+        $_POST['created']  = Time::now();
+        $_POST['modified'] = Time::now();
+
+        // Encrypt the password  
+        $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);            
+
+        // Create an encrypted token via their email address and a random string
+        $_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
 
         // Insert this user into the database
         $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
