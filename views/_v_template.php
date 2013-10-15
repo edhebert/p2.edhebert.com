@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php if(isset($title)) echo $title; ?></title>
+        <title><?php if(isset($title)) echo $title . " | "; ?>Blabbr</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -35,21 +35,21 @@
             </div>
                 <nav class="collapse navbar-collapse pull-right" role="navigation">
                     <ul class="nav navbar-nav">
-                        <li>
-                            <a href="../getting-started">Getting started</a>
-                        </li>
-                        <li>
-                            <a href="../css">CSS</a>
-                        </li>
-                        <li class="active">
-                            <a href="../components">Components</a>
-                        </li>
-                        <li>
-                            <a href="../javascript">JavaScript</a>
-                        </li>
-                        <li>
-                            <a href="../customize">Customize</a>
-                        </li>
+                        <?php if ($user) : ?>
+                            <li>
+                                <a href='/users/logout'>Logout</a>
+                            </li>
+                            <li>
+                                <a href='/users/profile'>Profile</a>
+                            </li>
+                        <?php else: ?>
+                            <li>
+                                <a href='/users/signup'>Sign up</a>
+                            </li>
+                            <li>
+                                <a href='/users/login'>Log in</a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </nav>
             </div>

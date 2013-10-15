@@ -70,11 +70,16 @@ class users_controller extends base_controller {
 
     public function profile($user_name = NULL) {
 
+        // if user is blank, then they're not logged in - redirect to login
+        if (!$this->user) {
+            router::redirect('users/login');
+        }
+
         // pass the profile view to the 'content' area of the master template
         $this->template->content = View::instance('v_users_profile');
     
         // title for this page 
-        $this->template->title = "Profile";
+        $this->template->title = $this->user->first_name . " " . $this->user->last_name;
 
         // pass the user name to the profile view
         $this->template->content->user_name = $user_name;
