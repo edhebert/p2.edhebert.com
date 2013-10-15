@@ -1,5 +1,5 @@
 <div class="col-md-6 col-md-offset-3">
-    <h2 class="page-header">Create your very own Blabbr account.</h2>
+    <h2 class="page-header">Start Blabbing.<br>Create a Blabbr account.</h2>
     <form role="form" method="POST" action="/users/p_signup">
         <div class="form-group">
             <label for="first_name">First Name</label>
@@ -17,6 +17,6 @@
             <label for="first_name">Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
         </div>  
-        <button type="submit" class="btn btn-default">Create an Account</button>   
+        <button type="submit" class="btn btn-custom">Create an Account</button>   
     </form>
 </div>
