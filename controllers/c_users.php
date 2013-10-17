@@ -25,7 +25,7 @@ class users_controller extends base_controller {
 
     public function p_login() {
 
-        // Sanitize the user entered data to prevent any funny-business (re: SQL Injection Attacks)
+        // Sanitize the user entered data to prevent SQL Injection Attacks
         $_POST = DB::instance(DB_NAME)->sanitize($_POST);
 
         // Hash submitted password so we can compare it against one in the db
@@ -111,30 +111,51 @@ class users_controller extends base_controller {
         $this->template->content = View::instance('v_users_signup');
         $this->template->title   = "Sign Up";
 
-        // Render template
-        echo $this->template;
+        // If no POST data was yet submitted, just render the view
+        if(!$_POST) {
+            echo $this->template;
+            return;
+        }
 
-    }
+        // init error to false
+        $error = false;
 
-    public function p_signup() {
+        # Initiate error
+        $this->template->content->error = '';
 
-        // More data we want stored with the user
-        $_POST['created']  = Time::now();
-        $_POST['modified'] = Time::now();
+        // check POST data for valid input
+        foreach($_POST as $field_name => $value) { 
+            // If any field was blank, add a message to the error View variable
+            if($value == "") {
+                $this->template->content->error .= '<p>' . $field_name . ' is blank.</p>';
+                $error = true;
+            }
+        }
 
-        // Encrypt the password  
-        $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);            
+        // if errors, report them and reload view
+        if ($error){
+            $this->template->content->error = '<p>All fields are required.</p>';
+            echo $this->template;
+        }
 
-        // Create an encrypted token via their email address and a random string
-        $_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
+        // if no errors, add user to the database
+        else {   
+            // UNIX timestamps for created and modified date
+            $_POST['created']  = Time::now();
+            $_POST['modified'] = Time::now();
 
-        // Insert this user into the database
-        $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
+            // Encrypt the password  
+            $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);            
 
-        # For now, just confirm they've signed up - 
-        # You should eventually make a proper View for this
-        echo 'You\'re signed up';
+            // Create an encrypted token via their email address and a random string
+            $_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
 
+            // Insert this user into the database
+            $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
+
+            // TODO - make a view for this and redirect!
+            echo 'You\'re signed up';
+        }
     }    
 
 } // eoc

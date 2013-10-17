@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">Blabbr</a>
+            <a href="/" class="navbar-brand"><span class="glyphicon glyphicon-bullhorn"></span>Blabbr</a>
             </div>
                 <nav class="collapse navbar-collapse pull-right" role="navigation">
                     <ul class="nav navbar-nav">

@@ -1,4 +1,15 @@
-/* CSS and Twitter Bootstrap overrides by Ed Hebert ehebert@fas.harvard.edu */
+/** 
+ * CSCI E-15 Project 2
+ * Ed Hebert ehebert@fas.harvard.edu 
+ *
+ * Note - Twitter Bootstrap is used on this app, and many of these styles
+ * are overrides of Bootstrap defaults
+ */
+
+
+/**
+ * General, sitewise styles 
+ */
 
 body, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
@@ -7,21 +18,24 @@ body, h1, h2, h3, h4, h5, h6 {
 h1, h2, h3, h4, h5, h6, label {
 	font-weight: bold;
 	color: #3C4789;
-
 }
 
-.navbar {
-	margin-bottom: 50px;
+a, a:visited {
+	transition: all 0.2s ease-in-out 0s;
+	-moz-transition: all 0.2s ease-in-out 0s;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	-o-transition: all 0.2s ease-in-out 0s;
+	-ms-transition: all 0.2s ease-in-out 0s;
 }
+
+/**
+ * Main menu navigation styles 
+ */
 
 .navbar-inverse {
 	background-color: #3C4789;
-}
-
-.navbar-inverse .navbar-brand {
-	font-size: 36px;
-	font-family: 'Snowburst One', cursive;
-	color: #fff;
+	border-bottom: 5px solid #FFB608;
+	margin-bottom: 50px;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -31,13 +45,33 @@ h1, h2, h3, h4, h5, h6, label {
 .navbar-inverse .navbar-nav>li>a:hover {
 	color: #fff;
 }
-.navbar-inverse .navbar-brand:hover {
-	color: #ddd;
+
+.navbar-nav {
+	padding-top: 10px;
+}
+/**
+ * Branding 
+ */
+
+.navbar-inverse .navbar-brand {
+	font-size: 36px;
+	font-family: 'Snowburst One', cursive;
+	color: #fff;
 }
 
-.mainmenu {
-	margin-top: 20px;
+.glyphicon-bullhorn {
+	margin: 0 8px 10px 0;
+	font-size: 30px;
 }
+
+.navbar-inverse .navbar-brand:hover {
+	color: #FFB608;
+}
+
+
+/**
+ * Form page styles 
+ */
 
 .callout-error {
 	padding: 20px;
@@ -49,28 +83,34 @@ h1, h2, h3, h4, h5, h6, label {
 
 
 .form-control:focus {
-border-color: #BA9006;
-outline: 0;
--moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(186,144,6,0.6);
--webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(186,144,6,0.6);
-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(186,144,6,0.6);
+	border-color: #FFB608;
+	outline: 0;
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(218,155,7,0.6);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(218,155,7,0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(218,155,7,0.6);
 }
 
 
-/* Button Customization via http://twitterbootstrap3buttons.w3masters.nl/ */
+/* Button customization assistance via http://twitterbootstrap3buttons.w3masters.nl/ */
 .btn-custom {
-  background-color: #3C4789;
-  border-color: #3C4789;
-  color: #fff;
+	background-color: #3C4789;
+	border-color: #3C4789;
+	color: #fff;
+	margin-bottom: 50px;
+	transition: all 0.2s ease-in-out 0s;
+	-moz-transition: all 0.2s ease-in-out 0s;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	-o-transition: all 0.2s ease-in-out 0s;
+	-ms-transition: all 0.2s ease-in-out 0s;
 }
 
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom:active,
 .btn-custom.active {
-  background-color: #343e77;
-  border-color: #2c3566;
-  color: #fff;
+	background-color: #FFB608;
+	border-color: #FFB608;
+	color: #3C4789;
 }
 
 .btn-custom.disabled:hover,
@@ -85,7 +125,7 @@ fieldset[disabled] .btn-custom:hover,
 fieldset[disabled] .btn-custom:focus,
 fieldset[disabled] .btn-custom:active,
 fieldset[disabled] .btn-custom.active {
-  background-color: #3C4789;
-  border-color: #3C4789;
-  color: #fff;
+	background-color: #3C4789;
+	border-color: #3C4789;
+	color: #fff;
 }

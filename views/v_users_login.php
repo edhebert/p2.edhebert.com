@@ -12,7 +12,8 @@
         <!-- warn on login errors -->
         <?php if(isset($error)): ?>
             <div class="callout-error">
-                <h4>Login failed.</h4> Please double check your email and password.
+                <h4>Login failed.</h4> 
+                <p>Please double check your email and password.</p>
             </div>
         <?php endif; ?> 
         <button type="submit" class="btn btn-custom">Login</button>   
