@@ -138,8 +138,18 @@ class users_controller extends base_controller {
             echo $this->template;
         }
 
+        // insure password is typed correctly
+        if ($_POST['password'] != $_POST['retype']) {
+             $this->template->content->error = '<p>Password fields don&apos;t match.</p>';
+            echo $this->template;           
+        }
+
         // if no errors, add user to the database
         else {   
+            
+            // unset the 'retype' field (not needed in db)
+            unset($_POST['retype']);
+
             // UNIX timestamps for created and modified date
             $_POST['created']  = Time::now();
             $_POST['modified'] = Time::now();
