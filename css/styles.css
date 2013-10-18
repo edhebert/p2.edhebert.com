@@ -21,17 +21,19 @@ body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    /* Negative indent footer by it's height */
-    margin: 0 auto -60px;
+    /* Negative indent footer by its height */
+    margin: 0 auto -120px;
 }
 
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-    height: 60px;
+    height: 120px;
 }
 #footer {
-    background-color: #eee;
+    background-color: #3C4789;
+    border-top: 5px solid #FFB608;
+    color: #fff;
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
@@ -73,12 +75,13 @@ a, a:visited {
 .well {
 	background-color: #FFFBEC;
 	border-color: #B7B4C5;
-	margin: 0 20px;
+	margin: 0 20px 50px;
 }
 
 .page-header {
 	border-bottom: 1px solid #B7B4C5;
 }
+
 
 /**
  * Main menu navigation styles 

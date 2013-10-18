@@ -60,13 +60,27 @@
             <div class="container">
                 <div class="row well well-lg">
                     <?php if(isset($content)) echo $content; ?>
-                </div>
+                </div> <!-- well -->
             </div> <!-- container -->
             
+            <div id="push"></div> <!-- sticky footer push -->
+            
         </div> <!-- wrap -->   
+        
         <div id="footer">
-        footer content here
+            <div class="container">
+                <div class="row">
+                    <div class="md-col-3">
+                        <p>Blabbr's &apos;+1&apos; features include:</p>
+                        <ul>
+                            <li>Emailing a signup confirmation to a new user.</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div> <!-- footer -->
+        
         <!-- jQuery -->
         <script src="//code.jquery.com/jquery.js"></script>
 

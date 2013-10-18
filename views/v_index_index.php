@@ -1,5 +1,9 @@
 <?php if($user) router::redirect('users/profile');;?>
-<h1>Welcome to <?=APP_NAME?></h1>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <h1 class="page-header">Welcome to <?=APP_NAME?></h1>
+    </div>
+</div>
 <div class="row">
     <div class="col-md-4 col-md-offset-1 centered">
         <h2 class="centered">Sign Up</h2>
@@ -12,9 +16,3 @@
         <a href="/users/login" class="btn btn-custom">Log In</a>
     </div>
 </div>
-<p>Note: My &apos;+1&apos; features are
-    <ul>
-        <li>Emailing a signup confirmation to a new user.</li>
-        <li></li>
-    </ul>
-</p>
