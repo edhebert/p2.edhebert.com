@@ -20,48 +20,53 @@
 	
     </head>
 
-    <body>	
+    <body>
+        <!-- Sticky footer wrapper -->	
+        <div id="wrap">
+            <!-- Blabbr nav -->
+            <header class="navbar navbar-inverse navbar-static-top" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a href="/" class="navbar-brand"><span class="glyphicon glyphicon-bullhorn"></span>Blabbr</a>
+                    </div>
+                    <nav class="collapse navbar-collapse pull-right" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <?php if ($user) : ?>
+                                <li>
+                                    <a href='/users/logout'>Logout</a>
+                                </li>
+                                <li>
+                                    <a href='/users/profile'>Profile</a>
+                                </li>
+                            <?php else: ?>
+                                <li>
+                                    <a href='/users/signup'>Sign up</a>
+                                </li>
+                                <li>
+                                    <a href='/users/login'>Log in</a>
+                                </li>
+                            <?php endif; ?>
+                        </ul>
+                    </nav>
+                </div> <!-- container -->
+            </header>
 
-        <!-- Blabbr nav -->
-        <header class="navbar navbar-inverse navbar-static-top" role="banner">
             <div class="container">
-            <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a href="/" class="navbar-brand"><span class="glyphicon glyphicon-bullhorn"></span>Blabbr</a>
-            </div>
-                <nav class="collapse navbar-collapse pull-right" role="navigation">
-                    <ul class="nav navbar-nav">
-                        <?php if ($user) : ?>
-                            <li>
-                                <a href='/users/logout'>Logout</a>
-                            </li>
-                            <li>
-                                <a href='/users/profile'>Profile</a>
-                            </li>
-                        <?php else: ?>
-                            <li>
-                                <a href='/users/signup'>Sign up</a>
-                            </li>
-                            <li>
-                                <a href='/users/login'>Log in</a>
-                            </li>
-                        <?php endif; ?>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <div class="container">
-            <div class="row well well-lg">
-                <?php if(isset($content)) echo $content; ?>
-            </div>
-        </div> <!-- container -->
-
+                <div class="row well well-lg">
+                    <?php if(isset($content)) echo $content; ?>
+                </div>
+            </div> <!-- container -->
+            
+        </div> <!-- wrap -->   
+        <div id="footer">
+        footer content here
+        </div> <!-- footer -->
         <!-- jQuery -->
         <script src="//code.jquery.com/jquery.js"></script>
 
