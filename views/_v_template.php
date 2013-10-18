@@ -70,8 +70,8 @@
         <div id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="md-col-3">
-                        <p>Blabbr's &apos;+1&apos; features include:</p>
+                    <div class="md-col-3 pull-right">
+                        <p>Blabbr&apos;s &apos;PLUS ONE&apos; features include:</p>
                         <ul>
                             <li>Emailing a signup confirmation to a new user.</li>
                             <li></li>
