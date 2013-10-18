@@ -106,6 +106,9 @@ border-color: #ddd;
 	margin-bottom: 20px;
 }
 
+.form-control {
+	border: 1px solid #B7B4C5;
+}
 
 .form-control:focus {
 	border-color: #FFB608;
