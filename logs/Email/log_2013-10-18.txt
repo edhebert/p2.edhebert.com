@@ -1,0 +1,10 @@
+2013-10-18 10:49:20 - INFO --> -------------------------- 
+2013-10-18 10:49:20 - INFO --> Controller/Method: users/signup 
+2013-10-18 10:49:20 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-18 10:49:20 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-18 10:49:20 - INFO --> To: Ed (ehebert@fas.harvard.edu),  
+2013-10-18 10:49:20 - INFO --> CC:  
+2013-10-18 10:49:20 - INFO --> BCC:  
+2013-10-18 10:49:20 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-18 10:49:20 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day. 
+2013-10-18 10:49:21 - INFO --> FAILED TO SEND EMAIL 

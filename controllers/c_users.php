@@ -172,6 +172,17 @@ class users_controller extends base_controller {
             // Insert this user into the database
             $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
+            // Email a welcome message to the new user
+            $to[]    = Array("name" => $_POST['first_name'], "email" => $_POST['email']);
+            $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
+            $subject = "Welcome to Blabbr!";              
+                
+            $body = View::instance('v_email_welcome');
+                
+            // Send email
+            Email::send($to, $from, $subject, $body, true, '');
+
+
             // TODO - make a view for this and redirect!
             echo 'You\'re signed up';
         }
