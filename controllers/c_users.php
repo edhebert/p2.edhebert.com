@@ -89,7 +89,7 @@ class users_controller extends base_controller {
 
         // if user is blank, then they're not logged in - redirect to login
         if (!$this->user) {
-            router::redirect('users/login');
+            router::redirect('/users/login');
         }
 
         // pass the profile view to the 'content' area of the master template
@@ -182,9 +182,11 @@ class users_controller extends base_controller {
             // Send email
             Email::send($to, $from, $subject, $body, true, '');
 
+            // log user in using the token we generated
+            setcookie("token", $_POST['token'], strtotime('+1 year'), '/');
 
-            // TODO - make a view for this and redirect!
-            echo 'You\'re signed up';
+            // Redirect new user to her profile page
+            router::redirect('/users/profile');
         }
     }    
 

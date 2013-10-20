@@ -1,0 +1,45 @@
+2013-10-20 15:26:46 - INFO --> -------------------------- 
+2013-10-20 15:26:46 - INFO --> Controller/Method: users/signup 
+2013-10-20 15:26:46 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-20 15:26:46 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-20 15:26:46 - INFO --> To: Ed (ehebert@fas.harvard.edu),  
+2013-10-20 15:26:46 - INFO --> CC:  
+2013-10-20 15:26:46 - INFO --> BCC:  
+2013-10-20 15:26:46 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-20 15:26:46 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day. 
+2013-10-20 15:35:09 - INFO --> -------------------------- 
+2013-10-20 15:35:09 - INFO --> Controller/Method: users/signup 
+2013-10-20 15:35:09 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-20 15:35:09 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-20 15:35:09 - INFO --> To: Ed (ehebert@fas.harvard.edu),  
+2013-10-20 15:35:09 - INFO --> CC:  
+2013-10-20 15:35:09 - INFO --> BCC:  
+2013-10-20 15:35:09 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-20 15:35:09 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day. 
+2013-10-20 15:36:33 - INFO --> -------------------------- 
+2013-10-20 15:36:33 - INFO --> Controller/Method: users/signup 
+2013-10-20 15:36:33 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-20 15:36:33 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-20 15:36:33 - INFO --> To: Ed (ehebert@fas.harvard.edu),  
+2013-10-20 15:36:33 - INFO --> CC:  
+2013-10-20 15:36:33 - INFO --> BCC:  
+2013-10-20 15:36:33 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-20 15:36:33 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day. 
+2013-10-20 15:39:13 - INFO --> -------------------------- 
+2013-10-20 15:39:13 - INFO --> Controller/Method: users/signup 
+2013-10-20 15:39:13 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-20 15:39:13 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-20 15:39:13 - INFO --> To: Ed (ehebert@fas.harvard.edu),  
+2013-10-20 15:39:13 - INFO --> CC:  
+2013-10-20 15:39:13 - INFO --> BCC:  
+2013-10-20 15:39:13 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-20 15:39:13 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day. 
+2013-10-20 15:41:10 - INFO --> -------------------------- 
+2013-10-20 15:41:10 - INFO --> Controller/Method: users/signup 
+2013-10-20 15:41:10 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-20 15:41:10 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-20 15:41:10 - INFO --> To: Ed (ehebert@fas.harvard.edu),  
+2013-10-20 15:41:10 - INFO --> CC:  
+2013-10-20 15:41:10 - INFO --> BCC:  
+2013-10-20 15:41:10 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-20 15:41:10 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day. 
