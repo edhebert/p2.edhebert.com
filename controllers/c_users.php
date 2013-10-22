@@ -106,16 +106,22 @@ class users_controller extends base_controller {
     }
 
     public function profile_update() {
-
         
+        // print_r($_FILES);
 
-        //upload an image
-        $image = Upload::upload($_FILES, "/uploads/avatars/", array("jpg", "jpeg", "gif", "png"), $this->user->user_id);
+        // if user chose a new image file, upload it
+        if ($_FILES[error] == 0)
+        {
+            //upload an image
+            $image = Upload::upload($_FILES, "/uploads/avatars/", array("jpg", "jpeg", "gif", "png"), $this->user->user_id);
 
-        // print_r($image);
-        // update database with new info
-        $data = Array("image" => $image);
-        DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
+            $data = Array("image" => $image);
+            DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
+
+            /* open_image("/uploads/avatars/".$image);
+            resize(150,150);
+            save_image("/uploads/avatars/".$image); */
+        }
 
         // Redirect new user to her profile page
         router::redirect('/users/profile'); 
@@ -136,7 +142,7 @@ class users_controller extends base_controller {
         // init error to false
         $error = false;
 
-        # Initiate error
+        // Initiate error
         $this->template->content->error = '';
 
         // check POST data for valid input
