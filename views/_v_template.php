@@ -73,7 +73,7 @@
                     <div class="md-col-3 pull-right">
                         <p>Blabbr&apos;s &apos;PLUS ONE&apos; features include:</p>
                         <ul>
-                            <li>Emailing a signup confirmation to a new user.</li>
+                            <li>Emailing a welcome letter to a new user.</li>
                             <li></li>
                         </ul>
                     </div>

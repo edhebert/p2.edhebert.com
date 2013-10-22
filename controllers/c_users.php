@@ -105,6 +105,22 @@ class users_controller extends base_controller {
         echo $this->template;
     }
 
+    public function profile_update() {
+
+        
+
+        //upload an image
+        $image = Upload::upload($_FILES, "/uploads/avatars/", array("jpg", "jpeg", "gif", "png"), $this->user->user_id);
+
+        // print_r($image);
+        // update database with new info
+        $data = Array("image" => $image);
+        DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
+
+        // Redirect new user to her profile page
+        router::redirect('/users/profile'); 
+    }  
+
     public function signup() {
 
         // Setup view
@@ -188,6 +204,6 @@ class users_controller extends base_controller {
             // Redirect new user to her profile page
             router::redirect('/users/profile');
         }
-    }    
+    } 
 
 } // eoc
