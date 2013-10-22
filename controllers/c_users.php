@@ -9,59 +9,56 @@ class users_controller extends base_controller {
         echo "This is the index page";
     }
 
-    public function login($error = NULL) {
+    public function login() {
 
         // Setup view
         $this->template->content = View::instance('v_users_login');
         $this->template->title   = "Login";
 
-        // Pass data to the view
-        $this->template->content->error = $error;
-
         // Render template
-        echo $this->template;
-
-    }
-
-    public function p_login() {
-
-        // Sanitize the user entered data to prevent SQL Injection Attacks
-        $_POST = DB::instance(DB_NAME)->sanitize($_POST);
-
-        // Hash submitted password so we can compare it against one in the db
-        $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
-
-        // Search the db for this email and password
-        // Retrieve the token if it's available
-        $q = "SELECT token 
-            FROM users 
-            WHERE email = '".$_POST['email']."' 
-            AND password = '".$_POST['password']."'";
-
-        $token = DB::instance(DB_NAME)->select_field($q);
-
-        // If we didn't find a matching token in the database, it means login failed
-        if(!$token) {
-
-            // Send them back to the login page
-            Router::redirect("/users/login/error");
-
-        // But if we did, login succeeded! 
+        if (!$_POST) {
+            echo $this->template;
+            return;
+        
         } else {
+            // Sanitize the user entered data to prevent SQL Injection Attacks
+            $_POST = DB::instance(DB_NAME)->sanitize($_POST);
 
-            /* 
-            Store this token in a cookie using setcookie()
-            Important Note: *Nothing* else can echo to the page before setcookie is called
-            Not even one single white space.
-            param 1 = name of the cookie
-            param 2 = the value of the cookie
-            param 3 = when to expire
-            param 4 = the path of the cooke (a single forward slash sets it for the entire domain)
-            */
-            setcookie("token", $token, strtotime('+1 year'), '/');
+            // Hash submitted password so we can compare it against one in the db
+            $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 
-            # Send them to the main page - or whever you want them to go
-            Router::redirect("/");
+            // Search the db for this email and password
+            // Retrieve the token if it's available
+            $q = "SELECT token 
+                FROM users 
+                WHERE email = '".$_POST['email']."' 
+                AND password = '".$_POST['password']."'";
+
+            $token = DB::instance(DB_NAME)->select_field($q);
+
+            // If we didn't find a matching token in the database, it means login failed
+            if(!$token) {
+                // send an error back 
+                $this->template->content->error = '<p>This username &amp; password combination was not found.</p>';
+                echo $this->template;
+
+            // But if we did, login succeeded! 
+            } else {
+
+                /* 
+                Store this token in a cookie using setcookie()
+                Important Note: *Nothing* else can echo to the page before setcookie is called
+                Not even one single white space.
+                param 1 = name of the cookie
+                param 2 = the value of the cookie
+                param 3 = when to expire
+                param 4 = the path of the cooke (a single forward slash sets it for the entire domain)
+                */
+                setcookie("token", $token, strtotime('+1 year'), '/');
+
+                # Send them to the main page - or whever you want them to go
+                Router::redirect("/");
+            }
         }
     }
 
@@ -106,11 +103,8 @@ class users_controller extends base_controller {
     }
 
     public function profile_update() {
-        
-        // print_r($_FILES);
-
-        // if user chose a new image file, upload it
-        if ($_FILES[error] == 0)
+        // if user specified a new image file, upload it
+        if ($_FILES['avatar']['error'] == 0)
         {
             //upload an image
             $image = Upload::upload($_FILES, "/uploads/avatars/", array("jpg", "jpeg", "gif", "png"), $this->user->user_id);
@@ -118,12 +112,13 @@ class users_controller extends base_controller {
             $data = Array("image" => $image);
             DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
 
-            /* open_image("/uploads/avatars/".$image);
-            resize(150,150);
-            save_image("/uploads/avatars/".$image); */
+            // resize the image
+            $imgObj = new Image($_SERVER["DOCUMENT_ROOT"] . '/uploads/avatars/' . $image);
+            $imgObj->resize(150,150, "crop");
+            $imgObj->save_image($_SERVER["DOCUMENT_ROOT"] . '/uploads/avatars/' . $image); 
         }
 
-        // Redirect new user to her profile page
+        // Redirect back to the profile page
         router::redirect('/users/profile'); 
     }  
 

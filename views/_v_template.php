@@ -74,7 +74,7 @@
                         <p>Blabbr&apos;s &apos;PLUS ONE&apos; features include:</p>
                         <ul>
                             <li>Emailing a welcome letter to a new user.</li>
-                            <li></li>
+                            <li>Uploading / resizing a user profile image</li>
                         </ul>
                     </div>
                 </div>
