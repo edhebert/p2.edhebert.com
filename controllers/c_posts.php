@@ -21,7 +21,8 @@ class posts_controller extends base_controller {
         $q = "SELECT 
                 posts .* , 
                 users.first_name, 
-                users.last_name
+                users.last_name,
+                users.image
             FROM posts
             INNER JOIN users 
                 ON posts.user_id = users.user_id";

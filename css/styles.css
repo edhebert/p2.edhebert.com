@@ -203,3 +203,16 @@ fieldset[disabled] .btn-custom.active {
 	border-color: #3C4789;
 	color: #fff;
 }
+
+/**
+ * Posts
+ */
+
+ .avatar{
+ 	border: 1px solid #3C4789;
+ 	margin-top:15px;
+ }
+
+ .post {
+ 	background-color: #FFF3CA;
+ }
