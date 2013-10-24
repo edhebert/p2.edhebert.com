@@ -14,6 +14,9 @@
 
         <!-- custom styles -->
         <link href="/css/styles.css" rel="stylesheet" media="screen">
+        					
+        <!-- Controller Specific JS/CSS -->
+        <?php if(isset($client_files_head)) echo $client_files_head; ?>
         
         <!-- Google Analytics -->
         <script>
@@ -24,11 +27,8 @@
 
           ga('create', 'UA-44004266-2', 'edhebert.com');
           ga('send', 'pageview');
+
         </script>
-        					
-        <!-- Controller Specific JS/CSS -->
-        <?php if(isset($client_files_head)) echo $client_files_head; ?>
-	
     </head>
 
     <body>
