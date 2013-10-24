@@ -16,7 +16,7 @@
 	    </div>
     </div>
 </article>
-
+<h4 class="page-header">Posts you follow</h4>
 <?php foreach($posts as $post): ?>
 <article>
 	<div class="row">

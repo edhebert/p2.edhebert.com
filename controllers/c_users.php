@@ -56,8 +56,8 @@ class users_controller extends base_controller {
                 */
                 setcookie("token", $token, strtotime('+1 year'), '/');
 
-                # Send them to the main page - or whever you want them to go
-                Router::redirect("/");
+                # Send them to the posts page
+                Router::redirect("/posts/");
             }
         }
     }
@@ -202,8 +202,8 @@ class users_controller extends base_controller {
             // log user in using the token we generated
             setcookie("token", $_POST['token'], strtotime('+1 year'), '/');
 
-            // Redirect new user to her profile page
-            router::redirect('/users/profile');
+            // Redirect new user to the posts page
+            Router::redirect("/posts/");
         }
     } 
 

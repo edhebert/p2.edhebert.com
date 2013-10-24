@@ -1,0 +1,36 @@
+2013-10-24 11:12:43 - INFO --> -------------------------- 
+2013-10-24 11:12:43 - INFO --> Controller/Method: users/signup 
+2013-10-24 11:12:43 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-24 11:12:43 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-24 11:12:43 - INFO --> To: Elmer (elmer@edhebert.com),  
+2013-10-24 11:12:43 - INFO --> CC:  
+2013-10-24 11:12:43 - INFO --> BCC:  
+2013-10-24 11:12:43 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-24 11:12:43 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day.
+
+Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
+2013-10-24 11:12:44 - INFO --> FAILED TO SEND EMAIL 
+2013-10-24 11:18:30 - INFO --> -------------------------- 
+2013-10-24 11:18:30 - INFO --> Controller/Method: users/signup 
+2013-10-24 11:18:30 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-24 11:18:30 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-24 11:18:30 - INFO --> To: Daffy (daffy@edhebert.com),  
+2013-10-24 11:18:30 - INFO --> CC:  
+2013-10-24 11:18:30 - INFO --> BCC:  
+2013-10-24 11:18:30 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-24 11:18:30 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day.
+
+Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
+2013-10-24 11:18:31 - INFO --> FAILED TO SEND EMAIL 
+2013-10-24 11:33:00 - INFO --> -------------------------- 
+2013-10-24 11:33:00 - INFO --> Controller/Method: users/signup 
+2013-10-24 11:33:00 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-24 11:33:00 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-24 11:33:00 - INFO --> To: Marvin (marvin@edhebert.com),  
+2013-10-24 11:33:00 - INFO --> CC:  
+2013-10-24 11:33:00 - INFO --> BCC:  
+2013-10-24 11:33:00 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-24 11:33:00 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day.
+
+Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
+2013-10-24 11:33:01 - INFO --> FAILED TO SEND EMAIL 

@@ -144,6 +144,10 @@ border-color: #ddd;
  * Form page styles 
  */
 
+ textarea {
+ 		resize: none;
+ }
+
 .callout-error {
 	padding: 20px;
 	border-left: 5px;
@@ -170,7 +174,7 @@ border-color: #ddd;
 	background-color: #3C4789;
 	border-color: #3C4789;
 	color: #fff;
-	margin: 20px 0 50px 0;
+	margin: 20px 0 20px 0;
 	transition: all 0.2s ease-in-out 0s;
 	-moz-transition: all 0.2s ease-in-out 0s;
 	-webkit-transition: all 0.2s ease-in-out 0s;
@@ -210,7 +214,7 @@ fieldset[disabled] .btn-custom.active {
 
  .avatar{
  	border: 1px solid #3C4789;
- 	margin-top:15px;
+ 	margin-top: 15px;
  }
 
  .post {
@@ -220,3 +224,16 @@ fieldset[disabled] .btn-custom.active {
  .postform {
  	margin: 0 25px;
  }
+
+ /**
+  * Posts / Users
+  */
+
+.caption {
+    text-align: center;
+}
+
+.thumbnail {
+    background-color: #FFF3CA;
+    margin-bottom: 20px;
+}
