@@ -156,7 +156,7 @@ class users_controller extends base_controller {
         }
 
         // insure password is typed correctly
-        if ($_POST['password'] != $_POST['retype']) {
+        else if ($_POST['password'] != $_POST['retype']) {
             $this->template->content->error = '<p>Password fields don&apos;t match.</p>';
             echo $this->template;           
         }
@@ -165,7 +165,7 @@ class users_controller extends base_controller {
         $_POST = DB::instance(DB_NAME)->sanitize($_POST);
         $exists = DB::instance(DB_NAME)->select_field("SELECT email FROM users WHERE email = '" . $_POST['email'] . "'");
 
-        if (isset($exists)) {
+        else if (isset($exists)) {
             $this->template->content->error = '<p>This email address is already registered.</p><p>Perhaps you&apos;d like to <a href="/users/login">login</a> instead?</p>';
             echo $this->template;            
         }
