@@ -6,18 +6,13 @@
             <h4>How the world sees you</h4>
             <p>Why not keep your profile looking snazzy with a nice picture of your fine self?</p>
             <form role="form" method='POST' enctype="multipart/form-data" action='/users/profile_update/'>
-            
-            <?php if ($user->image): ?>
-            	<img src="/uploads/avatars/<?= $user->image ?>" alt="<?=$user->first_name . ' ' . $user->last_name ?>">
-        	<?php else: ?>
-        		<img src="/uploads/avatars/placeholder-person.jpg" alt="No image uploaded">
-    		<?php endif ?>
-    		
-    		<div class="form-group">
-    			<label for="exampleInputFile">Your Profile Image</label>
-    			<input type="file" id="avatar" name="avatar">
-    		</div>
-    		<button type="submit" class="btn btn-custom">Update Your Profile</button>
+            	<img src="/uploads/avatars/<?= $user->image ?>" alt="<?=$user->first_name . ' ' . $user->last_name ?>">    		
+        		<div class="form-group">
+        			<label for="exampleInputFile">Your Profile Image</label>
+        			<input type="file" id="avatar" name="avatar">
+        		</div>
+        		<button type="submit" class="btn btn-custom">Update Your Profile</button>
+            </form>      
         </div> 
         <div class="page-header">
             <h4>Your followers</h4>  

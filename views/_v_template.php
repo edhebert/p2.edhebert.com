@@ -39,10 +39,13 @@
                         <ul class="nav navbar-nav">
                             <?php if ($user) : ?>
                                 <li>
-                                    <a href='/users/logout'>Logout</a>
+                                    <a href='/posts'>View Posts</a>
+                                </li>                            
+                                <li>
+                                    <a href='/users/profile'>Your Profile</a>
                                 </li>
                                 <li>
-                                    <a href='/users/profile'>Profile</a>
+                                    <a href='/users/logout'>Logout</a>
                                 </li>
                             <?php else: ?>
                                 <li>

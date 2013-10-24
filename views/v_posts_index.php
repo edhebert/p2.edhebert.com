@@ -1,9 +1,23 @@
+
+
+<article>
+	<div class="row">
+		<div class="col-sm-1">
+			<img class="img-circle avatar" src="/uploads/avatars/<?= $user->image ?>">
+		</div>
+		<div class="col-sm-11">
+			<form method='POST' action='/posts/p_add' class='postform'>
+			    <div class="form-group">
+			        <label for='content'>Add your own Blabb!</label>
+			        <textarea class="form-control" rows="3" name='content' id='content'></textarea>
+			    </div>
+			    <button type='submit' class="btn btn-custom">New Post</button>
+			</form> 
+	    </div>
+    </div>
+</article>
+
 <?php foreach($posts as $post): ?>
-<?php         
-	// send a picture to the view
-    if($post['image'] == '0')
-        $post['image'] = "placeholder-person.jpg";
-?>
 <article>
 	<div class="row">
 		<div class="col-sm-1">

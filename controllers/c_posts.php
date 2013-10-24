@@ -7,7 +7,7 @@ class posts_controller extends base_controller {
 
         # Make sure user is logged in if they want to use anything in this controller
         if(!$this->user) {
-            die("Members only. <a href='/users/login'>Login</a>");
+            Router::redirect("/");
         }
     }
 
@@ -25,7 +25,8 @@ class posts_controller extends base_controller {
                 users.image
             FROM posts
             INNER JOIN users 
-                ON posts.user_id = users.user_id";
+                ON posts.user_id = users.user_id
+            ORDER BY created DESC";
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
@@ -62,8 +63,8 @@ class posts_controller extends base_controller {
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
         DB::instance(DB_NAME)->insert('posts', $_POST);
 
-        # Quick and dirty feedback
-        echo "Your post has been added. <a href='/posts/add'>Add another</a>";
+        # Show the new post by refreshing the post page
+        Router::redirect("/posts/");
 
     }
 }
