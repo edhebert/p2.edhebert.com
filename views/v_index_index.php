@@ -1,4 +1,4 @@
-<?php if($user) router::redirect('users/profile');;?>
+<?php if($user) router::redirect('/posts');;?>
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
         <h1 class="page-header">Welcome to <?=APP_NAME?></h1>
