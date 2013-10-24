@@ -34,3 +34,27 @@ Be sure to visit Blabbr often by visiting http://p2.edhebert.com!
 
 Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
 2013-10-24 11:33:01 - INFO --> FAILED TO SEND EMAIL 
+2013-10-24 13:55:21 - INFO --> -------------------------- 
+2013-10-24 13:55:21 - INFO --> Controller/Method: users/signup 
+2013-10-24 13:55:21 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-24 13:55:21 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-24 13:55:21 - INFO --> To: Porky (porky@edhebert.com),  
+2013-10-24 13:55:21 - INFO --> CC:  
+2013-10-24 13:55:21 - INFO --> BCC:  
+2013-10-24 13:55:21 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-24 13:55:21 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day.
+
+Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
+2013-10-24 13:55:22 - INFO --> FAILED TO SEND EMAIL 
+2013-10-24 14:47:21 - INFO --> -------------------------- 
+2013-10-24 14:47:21 - INFO --> Controller/Method: users/signup 
+2013-10-24 14:47:21 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-24 14:47:21 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-24 14:47:21 - INFO --> To: Pepé (pepe@edhebert.com),  
+2013-10-24 14:47:21 - INFO --> CC:  
+2013-10-24 14:47:21 - INFO --> BCC:  
+2013-10-24 14:47:21 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-24 14:47:21 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day.
+
+Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
+2013-10-24 14:47:22 - INFO --> FAILED TO SEND EMAIL 

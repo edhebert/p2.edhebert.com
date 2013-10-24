@@ -1,5 +1,3 @@
-
-
 <article>
 	<div class="row">
 		<div class="col-sm-1">
@@ -16,7 +14,11 @@
 	    </div>
     </div>
 </article>
-<h4 class="page-header">Posts you follow</h4>
+<h4 class="page-header">Blabbrs you're following</h4>
+<?php if (count($posts) == 0) :?>
+	<p>Hey, you haven't followed anyone yet!<br>Why not <a href="/posts/users">follow some Blabbrs</a> now?</p>
+<?php endif; ?>
+	
 <?php foreach($posts as $post): ?>
 <article>
 	<div class="row">

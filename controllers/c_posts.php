@@ -17,7 +17,7 @@ class posts_controller extends base_controller {
         $this->template->content = View::instance('v_posts_index');
         $this->template->title   = "Posts";
 
-        # Build the query
+        /*# Build the query
         $q = "SELECT 
                 posts .* , 
                 users.first_name, 
@@ -26,7 +26,23 @@ class posts_controller extends base_controller {
             FROM posts
             INNER JOIN users 
                 ON posts.user_id = users.user_id
-            ORDER BY created DESC";
+            ORDER BY created DESC"; */
+
+         # Query
+        $q = 'SELECT 
+            posts.content,
+            posts.created,
+            posts.user_id AS post_user_id,
+            users_users.user_id AS follower_id,
+            users.first_name,
+            users.last_name,
+            users.image
+        FROM posts
+        INNER JOIN users_users 
+            ON posts.user_id = users_users.user_id_followed
+        INNER JOIN users 
+            ON posts.user_id = users.user_id
+        WHERE users_users.user_id = '.$this->user->user_id;   
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);

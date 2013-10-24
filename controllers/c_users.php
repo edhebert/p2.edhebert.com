@@ -189,6 +189,16 @@ class users_controller extends base_controller {
             // Insert this user into the database
             $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
+            // all users follow their own posts by default
+            $data = Array(
+                "created" => Time::now(),
+                "user_id" => $user_id,
+                "user_id_followed" => $user_id
+                );
+
+            # Do the insert
+            DB::instance(DB_NAME)->insert('users_users', $data);
+
             // Email a welcome message to the new user
             $to[]    = Array("name" => $_POST['first_name'], "email" => $_POST['email']);
             $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
