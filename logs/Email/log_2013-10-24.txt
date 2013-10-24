@@ -58,3 +58,39 @@ Be sure to visit Blabbr often by visiting http://p2.edhebert.com!
 
 Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
 2013-10-24 14:47:22 - INFO --> FAILED TO SEND EMAIL 
+2013-10-24 16:02:42 - INFO --> -------------------------- 
+2013-10-24 16:02:42 - INFO --> Controller/Method: users/signup 
+2013-10-24 16:02:42 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-24 16:02:42 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-24 16:02:42 - INFO --> To: test (test@test.com),  
+2013-10-24 16:02:42 - INFO --> CC:  
+2013-10-24 16:02:42 - INFO --> BCC:  
+2013-10-24 16:02:42 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-24 16:02:42 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day.
+
+Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
+2013-10-24 16:02:43 - INFO --> FAILED TO SEND EMAIL 
+2013-10-24 16:07:30 - INFO --> -------------------------- 
+2013-10-24 16:07:30 - INFO --> Controller/Method: users/signup 
+2013-10-24 16:07:30 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-24 16:07:30 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-24 16:07:30 - INFO --> To: test (),  
+2013-10-24 16:07:30 - INFO --> CC:  
+2013-10-24 16:07:30 - INFO --> BCC:  
+2013-10-24 16:07:30 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-24 16:07:30 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day.
+
+Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
+2013-10-24 16:07:31 - INFO --> FAILED TO SEND EMAIL 
+2013-10-24 16:14:04 - INFO --> -------------------------- 
+2013-10-24 16:14:04 - INFO --> Controller/Method: users/signup 
+2013-10-24 16:14:04 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY ehebert@fas.harvard.edu 
+2013-10-24 16:14:04 - INFO --> From: Blabbr (info@edhebert.com) 
+2013-10-24 16:14:04 - INFO --> To: test (test@test.com),  
+2013-10-24 16:14:04 - INFO --> CC:  
+2013-10-24 16:14:04 - INFO --> BCC:  
+2013-10-24 16:14:04 - INFO --> Subject: Welcome to Blabbr! 
+2013-10-24 16:14:04 - INFO --> Body: Welcome to Blabbr! We hope you find time to blabb each and every day.
+
+Be sure to visit Blabbr often by visiting http://p2.edhebert.com! 
+2013-10-24 16:14:05 - INFO --> FAILED TO SEND EMAIL 

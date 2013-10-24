@@ -144,35 +144,31 @@ class users_controller extends base_controller {
         foreach($_POST as $field_name => $value) { 
             // If any field was blank, add a message to the error View variable
             if($value == "") {
-                $this->template->content->error .= '<p>' . $field_name . ' is blank.</p>';
                 $error = true;
+                $this->template->content->error = '<p>All fields are required.</p>';
+                echo $this->template;
             }
-        }
-
-        // if errors, report them and reload view
-        if ($error){
-            $this->template->content->error = '<p>All fields are required.</p>';
-            echo $this->template;
-        }
-
-        // insure password is typed correctly
-        else if ($_POST['password'] != $_POST['retype']) {
-            $this->template->content->error = '<p>Password fields don&apos;t match.</p>';
-            echo $this->template;           
         }
 
         // check whether this user's email already exists (sanitize input first)
         $_POST = DB::instance(DB_NAME)->sanitize($_POST);
         $exists = DB::instance(DB_NAME)->select_field("SELECT email FROM users WHERE email = '" . $_POST['email'] . "'");
 
-        else if (isset($exists)) {
+        if (isset($exists)) {
+            $error = true;
             $this->template->content->error = '<p>This email address is already registered.</p><p>Perhaps you&apos;d like to <a href="/users/login">login</a> instead?</p>';
-            echo $this->template;            
+            echo $this->template;          
+        }
+
+        // insure password is typed correctly
+        else if ($_POST['password'] != $_POST['retype']) {
+            $error = true;
+            $this->template->content->error = '<p>Password fields don&apos;t match.</p>';
+            echo $this->template;          
         }
 
         // if no previous errors, add user to the database!
-        else {   
-            
+        else if (!$error){              
             // unset the 'retype' field (not needed in db)
             unset($_POST['retype']);
 
