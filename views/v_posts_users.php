@@ -13,7 +13,7 @@
                     <h5><?=$blabbr['first_name']?> <?=$blabbr['last_name']?></h5>
                     <!-- If there exists a connection with this user, show an unfollow link -->
                     <?php if(isset($connections[$blabbr['user_id']])): ?>
-                        <p><a href="/posts/unfollow/<?=$blabbr['user_id']?>" class="btn btn-custom">Unfollow</a></p>
+                        <p class="unfollow"><a href="/posts/unfollow/<?=$blabbr['user_id']?>" class="btn btn-custom">Unfollow</a></p>
                     <!-- Otherwise, show the follow link -->
                     <?php else: ?>
                         <p><a href="/posts/follow/<?=$blabbr['user_id']?>" class="btn btn-custom">Follow</a></p>

@@ -87,17 +87,17 @@
         <div id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-xs-6">
                         <p>Blabbr&apos;s &apos;PLUS ONE&apos; features:</p>
                         <ul>
                             <li>Emailing a welcome letter to a new user.</li>
                             <li>Uploading / resizing a user profile image</li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
-                        <p class="right">Blabbr<br>DWA Project 2<br>
-                            Ed Hebert<br>
-                            <a href="mailto:ehebert@fas.harvard.edu">ehebert@fas.harvard.edu</a>
+                    <div class="col-xs-6">
+                        <p class="right pull-right">Blabbr<br>DWA Project 2<br>
+                        Ed Hebert<br>
+                        <a href="mailto:ehebert@fas.harvard.edu">ehebert@fas.harvard.edu</a>
                         </p>
                     </div>
                 </div>

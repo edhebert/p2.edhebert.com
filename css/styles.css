@@ -74,7 +74,7 @@ a, a:visited {
 	-ms-transition: all 0.2s ease-in-out 0s;
 }
 
-#footer a, a:visited {
+#footer a, #footer a:visited, .unfollow a, .unfollow a:visited {
 	color: #FFB608;
 }
 
