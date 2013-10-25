@@ -35,6 +35,7 @@ body {
     border-top: 5px solid #FFB608;
     color: #fff;
     padding-top: 10px;
+    font-size: 12px;
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
@@ -73,6 +74,14 @@ a, a:visited {
 	-ms-transition: all 0.2s ease-in-out 0s;
 }
 
+#footer a, a:visited {
+	color: #FFB608;
+}
+
+#footer a:hover {
+	color: #FFFBEC;
+}
+
 .well {
 	background-color: #FFFBEC;
 	border-color: #B7B4C5;
@@ -81,6 +90,10 @@ a, a:visited {
 
 .page-header {
 	border-bottom: 1px solid #B7B4C5;
+}
+
+.right {
+	text-align: right;
 }
 
 
