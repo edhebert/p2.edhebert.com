@@ -107,7 +107,7 @@ class users_controller extends base_controller {
         if ($_FILES['avatar']['error'] == 0)
         {
             //upload an image
-            $image = Upload::upload($_FILES, "/uploads/avatars/", array("JPG", "JPEG", "jpg", "jpeg", "gif", "png"), $this->user->user_id);
+            $image = Upload::upload($_FILES, "/uploads/avatars/", array("JPG", "JPEG", "jpg", "jpeg", "gif", "GIF", "png", "PNG"), $this->user->user_id);
 
             $data = Array("image" => $image);
             DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
