@@ -198,7 +198,8 @@ border-color: #ddd;
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom:active,
-.btn-custom.active {
+.btn-custom.active,
+.unfollow a:hover {
 	background-color: #FFB608;
 	border-color: #FFB608;
 	color: #3C4789;
