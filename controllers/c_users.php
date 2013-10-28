@@ -82,7 +82,7 @@ class users_controller extends base_controller {
 
     }
 
-    public function profile($user_name = NULL) {
+    public function profile($error = NULL) {
 
         // if user is blank, then they're not logged in - redirect to login
         if (!$this->user) {
@@ -95,8 +95,8 @@ class users_controller extends base_controller {
         // title for this page 
         $this->template->title = $this->user->first_name . " " . $this->user->last_name;
 
-        // pass the user name to the profile view
-        $this->template->content->user_name = $user_name;
+        // pass errors, if any
+        $this->template->content->error = $error;
 
         //render the view 
         echo $this->template;
@@ -109,13 +109,25 @@ class users_controller extends base_controller {
             //upload an image
             $image = Upload::upload($_FILES, "/uploads/avatars/", array("JPG", "JPEG", "jpg", "jpeg", "gif", "GIF", "png", "PNG"), $this->user->user_id);
 
-            $data = Array("image" => $image);
-            DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
+            if($image == 'Invalid file type.') {
+                // return an error
+                Router::redirect("/users/profile/error"); 
+            }
+            else {
+                // process the upload
+                $data = Array("image" => $image);
+                DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
 
-            // resize the image
-            $imgObj = new Image($_SERVER["DOCUMENT_ROOT"] . '/uploads/avatars/' . $image);
-            $imgObj->resize(100,100, "crop");
-            $imgObj->save_image($_SERVER["DOCUMENT_ROOT"] . '/uploads/avatars/' . $image); 
+                // resize the image
+                $imgObj = new Image($_SERVER["DOCUMENT_ROOT"] . '/uploads/avatars/' . $image);
+                $imgObj->resize(100,100, "crop");
+                $imgObj->save_image($_SERVER["DOCUMENT_ROOT"] . '/uploads/avatars/' . $image); 
+            }
+        }
+        else
+        {
+            // return an error
+            Router::redirect("/users/profile/error");  
         }
 
         // Redirect back to the profile page

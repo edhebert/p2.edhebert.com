@@ -13,6 +13,12 @@
     			<input type="file" id="avatar" name="avatar">
     		</div>
     		<button type="submit" class="btn btn-custom">Update Your Profile Image</button>
-        </form>       
+        </form>   
+        <?php if(isset($error)): ?>
+            <div class="callout-error">
+                <h4>Upload failed.</h4> 
+                <p>Image file must be a jpg, gif, or png.</p>
+            </div>
+        <?php endif; ?>     
     </div>
 </div>
