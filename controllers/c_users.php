@@ -155,7 +155,7 @@ class users_controller extends base_controller {
         // check POST data for valid input
         foreach($_POST as $field_name => $value) { 
             // If any field was blank, add a message to the error View variable
-            if($value == "") {
+            if(trim($value) == "") {
                 $error = true;
                 $this->template->content->error = '<p>All fields are required.</p>';
                 echo $this->template;
