@@ -11,6 +11,12 @@
 			    </div>
 			    <button type='submit' class="btn btn-custom">New Post</button>
 			</form> 
+	        <?php if(isset($error)): ?>
+	            <div class="callout-error">
+	                <h4>Post failed.</h4> 
+	                <p>Say somethin' besides nuthin!</p>
+	            </div>
+	        <?php endif; ?>
 	    </div>
     </div>
 </article>

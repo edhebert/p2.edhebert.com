@@ -11,7 +11,7 @@ class posts_controller extends base_controller {
         }
     }
 
-    public function index() {
+    public function index($error = NULL) {
 
         # Set up the View
         $this->template->content = View::instance('v_posts_index');
@@ -51,6 +51,9 @@ class posts_controller extends base_controller {
         # Pass data to the View
         $this->template->content->posts = $posts;
 
+        # pass errors, if any
+        $this->template->content->error = $error;
+
         # Render the View
         echo $this->template;
 
@@ -75,6 +78,9 @@ class posts_controller extends base_controller {
         # Unix timestamp of when this post was created / modified
         $_POST['created']  = Time::now();
         $_POST['modified'] = Time::now();
+
+        if (trim($_POST['content']) == '')
+            Router::redirect("/posts/index/error");
 
         # Insert
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
