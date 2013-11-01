@@ -28,10 +28,10 @@
 <?php foreach($posts as $post): ?>
 <article>
 	<div class="row">
-		<div class="col-sm-1">
+		<div class="col-xs-2 col-lg-1">
 			<img class="img-circle avatar" src="/uploads/avatars/<?=$post['image']?>">
 		</div>
-	    <div class="col-sm-11">
+	    <div class="col-xs-10 col-lg-11">
 	    	<div class="well post">
 	    		<h4><?=$post['first_name']?> <?=$post['last_name']?></h4>
 	    		<p><?= stripslashes($post['content'])?></p>
