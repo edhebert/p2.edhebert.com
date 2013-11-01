@@ -1,9 +1,9 @@
 <article>
 	<div class="row">
-		<div class="col-sm-1">
+		<div class="col-xs-2 col-lg-1">
 			<img class="img-circle avatar" src="/uploads/avatars/<?= $user->image ?>">
 		</div>
-		<div class="col-sm-11">
+		<div class="col-xs-10 col-lg-11">
 			<form method='POST' action='/posts/p_add' class='postform'>
 			    <div class="form-group">
 			        <label for='content'>Add your own Blabb!</label>
