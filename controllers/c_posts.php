@@ -82,6 +82,8 @@ class posts_controller extends base_controller {
         if (trim($_POST['content']) == '')
             Router::redirect("/posts/index/error");
 
+        // Escape HTML chars (XSS attacks)
+        $_POST['content'] = stripslashes(htmlspecialchars($_POST['content']));
         # Insert
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
         DB::instance(DB_NAME)->insert('posts', $_POST);

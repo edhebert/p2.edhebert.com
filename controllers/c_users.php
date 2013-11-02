@@ -24,6 +24,9 @@ class users_controller extends base_controller {
             // Sanitize the user entered data to prevent SQL Injection Attacks
             $_POST = DB::instance(DB_NAME)->sanitize($_POST);
 
+            // Escape HTML chars (XSS attacks)
+            $_POST['email'] = stripslashes(htmlspecialchars($_POST['email']));
+
             // Hash submitted password so we can compare it against one in the db
             $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 
@@ -154,6 +157,8 @@ class users_controller extends base_controller {
 
         // check POST data for valid input
         foreach($_POST as $field_name => $value) { 
+            // Escape HTML chars (XSS attacks)
+            $value = stripslashes(htmlspecialchars($value));
             // If any field was blank, add a message to the error View variable
             if(trim($value) == "") {
                 $error = true;
